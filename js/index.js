@@ -23,9 +23,6 @@ function xmlRequest(id) {
             } else if (data["status"]["indicator"] === "minor") {
                 element.classList.remove("unresponsive");
                 element.classList.add("minor");
-            } else {
-                element.classList.remove("unresponsive");
-                element.classList.add("critical");
             }
         }
     }

@@ -69,6 +69,14 @@ img {
     background-image: linear-gradient(rgb(136, 13, 13), rgb(136, 13, 13)), linear-gradient(to right bottom, #ff9cf2, #21cbff);
 }
 
+.maintenance {
+    background-image: linear-gradient(rgb(25, 182, 255), rgb(25, 182, 255)), linear-gradient(to right bottom, #ff9cf2, #21cbff);
+}
+
+.maintenance:hover {
+    background-image: linear-gradient(rgb(19, 155, 218), rgb(19, 155, 218)), linear-gradient(to right bottom, #ff9cf2, #21cbff);
+}
+
 .unresponsive {
     background-image: linear-gradient(rgb(59, 59, 59), rgb(59, 59, 59)), linear-gradient(to right bottom, #ff9cf2, #21cbff);
 }

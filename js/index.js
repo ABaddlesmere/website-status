@@ -17,12 +17,13 @@ function xmlRequest(id) {
             element = document.getElementById(id);
             data = JSON.parse(this.responseText);
             document.getElementById(`${id}Desc`).innerText = data["status"]["description"];
-            if (data["status"]["indicator"] === "none") {
+            if ("indicator" in data["status"]) {
                 element.classList.remove("unresponsive");
-                element.classList.add("operational");
-            } else if (data["status"]["indicator"] === "minor") {
-                element.classList.remove("unresponsive");
-                element.classList.add("minor");
+                if (data["status"]["indicator"] === "none") {
+                    element.classList.add("operational");
+                } else {
+                    element.classList.add(data["status"]["indicator"])
+                }
             }
         }
     }
